@@ -7,8 +7,10 @@
 # Pull base image.
 FROM mhart/alpine-node:latest
 
+MAINTAINER Kasper Deng <kasperdeng@126.com>
+
 RUN \
-  apk add -v --no-cache git --arch x86_64 --progress && \
+  apk add --no-cache git --arch x86_64 && \
   cd /root && \
   git clone https://github.com/github/hubot && \
   cd /root/hubot && \
