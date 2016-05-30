@@ -16,7 +16,7 @@ RUN \
   cd /root/hubot && \
   rm -rf /root/hubot/src && \
   echo -e '#!/bin/sh \nset -e \nexport PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH" \nexec node_modules/.bin/hubot "$@"' > /root/hubot/bin/hubot && \
-  sed -i -e '/\"dependencies\".*/a\    \"hubot-weixin\":  \"^1.0.4\",' ./package.json && \
+  sed -i -e '/\"dependencies\".*/a\    \"hubot-weixin\":  \"^1.0.6\",' ./package.json && \
   npm install -g coffee-script --registry=https://registry.npm.taobao.org && \
   npm install --save --registry=https://registry.npm.taobao.org
 
